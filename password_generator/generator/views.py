@@ -13,10 +13,10 @@ def password(request):
     char = [x.upper() for x in characters]
 
     if request.GET.get('uppercase'):
-        characters.extend(list('~!@#%^&*()_'))
+        characters.extend(char)
 
     if request.GET.get('special'):
-        characters.extend(char)
+        characters.extend(list('~!@#%^&*()_'))
     
     if request.GET.get('numbers'):
         characters.extend(list('1234567890'))
