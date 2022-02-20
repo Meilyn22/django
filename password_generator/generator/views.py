@@ -7,7 +7,12 @@ import random
 def home(request):
     return render(request, 'generator/home.html')
 
+# Generate Password.
+# Default characters are lowercase.
+# Add upper case, numbers and special characters when user checks the box.
+# Use only generate to the range the user selects. 
 def password(request):
+    
     
     characters = list('abcdefghijklmnopqrstuvwxyz')
     char = [x.upper() for x in characters]
